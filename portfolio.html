@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Studio</title>
+    <!-- Сначала шрифт, потом нормализатор -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
+    <!-- Потом ваши стили -->
+    <link rel="stylesheet" href="./css/portfolio.min.css">
+</head>
+
+    <body class="page">
+        <!--шапка сайта-->
+        <header class="header">
+            <div class="header__container">
+                <a class="logo" href="/index.html" lang="en"><span class="logo__accent-word">Web</span>Studio</a>
+                <nav class="navigation">
+                    <ul class="navigation__list">
+                        <li class=" navigation__item"><a href="./index.html" class="navigation__link">Студия</a>
+                        </li>
+                        <li class=" navigation__item"><a href="./portfolio.html"
+                                class="navigation__link navigation__link--current">Портфолио</a></li>
+                        <li class=" navigation__item"><a href="#" class="navigation__link">Контакты</a></li>
+                    </ul>
+                </nav>
+                <ul class="contacts">
+                    <li class=" contacts__item">
+                        <a href="mailto:info@devstudio.com" target="_blank" class="contacts__link ">
+                            <svg class="contacts__icon" width="16" height="12">
+                                <use href="./images/icons.svg#icon-mail"></use>
+                            </svg>info&#64devstudio.com</a>
+                    </li>
+                    <li class=" contacts__item">
+                        <a href="tel:+380961111111" target="_blank" class="contacts__link ">
+                            <svg class="contacts__icon " width="10" height="16">
+                                <use href="./images/icons.svg#icon-smartphone"></use>
+                            </svg>+38 096 111 11 11</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <!-- job-options -->
+            <section class="work">
+                <div class="container">
+                    <ul class="work-buttons">
+                        <li class="work-buttons__item"><button type="button" class="work-buttons__examples">Все</button>
+                        </li>
+                        <li class="work-buttons__item"><button type="button"
+                                class="work-buttons__examples">Веб-сайты</button>
+                        </li>
+                        <li class="work-buttons__item"><button type="button"
+                                class="work-buttons__examples">Приложения</button>
+                        </li>
+                        <li class="work-buttons__item"><button type="button"
+                                class="work-buttons__examples">Дизайн</button>
+                        </li>
+                        <li class="work-buttons__item"><button type="button"
+                                class="work-buttons__examples">Маркетинг</button>
+                        </li>
+                    </ul>
+                    <!-- развернутый список -->
+                    <ul class="work-list">
+                        <li class="work-list__box">
+                            <a class="work-list__link" href="#">
+                                <div class="work-list__thumb">
+                                    <img class="work-list__image" src="./images/portfolio/9.jpg" alt="Технокряк"
+                                        width="370" height="294">
+                                    <div class="work-list__info">
+                                        <p class="work-list__info-text">
+                                            Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                                            сервисов.
+                                            Все это позволит посетителю получить
+                                            исчерпывающие сведения о компании или частном лице.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="work-list__description">
+                                    <h2 class="work-list__title">Технокряк</h2>
+                                    <p class="work-list__text">Веб-сайт</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="work-list__box">
+                            <a class="work-list__link" href="#">
+                                <div class="work-list__thumb">
+                                    <img class="work-list__image" src="./images/portfolio/1.jpg" alt="Технокряк"
+                                        width="370" height="294">
+                                    <div class="work-list__info">
+                                        <p class="work-list__info-text">
+                                            Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                                            сервисов.
+                                            Все это позволит посетителю получить
+                                            исчерпывающие сведения о компании или частном лице.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="work-list__description">
+                                    <h2 class="work-list__title">Постер New Orlean vs Golden Star</h2>
+                                    <p class="work-list__text">Дизайн</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="work-list__box">
+                            <a class="work-list__link" href="#">
+                                <div class="work-list__thumb">
+                                    <img class="work-list__image" src="./images/portfolio/2.jpg" alt="Технокряк"
+                                        width="370" height="294">
+                                    <div class="work-list__info">
+                                        <p class="work-list__info-text">
+                                            Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                                            сервисов.
+                                            Все это позволит посетителю получить
+                                            исчерпывающие сведения о компании или частном лице.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="work-list__description">
+                                    <h2 class="work-list__title">Ресторан Seafood</h2>
+                                    <p class="work-list__text">Приложение</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="work-list__box">
+                            <a class="work-list__link" href="#">
+                                <div class="work-list__thumb">
+                                    <img class="work-list__image" src="./images/portfolio/3.jpg" alt="Технокряк"
+                                        width="370" height="294">
+                                    <div class="work-list__info">
+                                        <p class="work-list__info-text">
+                                            Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                                            сервисов.
+                                            Все это позволит посетителю получить
+                                            исчерпывающие сведения о компании или частном лице.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="work-list__description">
+                                    <h2 class="work-list__title">Проект Prime</h2>
+                                    <p class="work-list__text">Маркетинг</p>
+                                </div>
+
+                            </a>
+                        </li>
+                        <li class="work-list__box">
+                            <a class="work-list__link" href="#">
+                                <div class="work-list__thumb">
+                                    <img class="work-list__image" src="./images/portfolio/4.jpg" alt="Технокряк"
+                                        width="370" height="294">
+                                    <div class="work-list__info">
+                                        <span class="work-list__info-text">
+                                            Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                                            сервисов.
+                                            Все это позволит посетителю получить
+                                            исчерпывающие сведения о компании или частном лице.
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="work-list__description">
+                                    <h2 class="work-list__title">Проект Boxes</h2>
+                                    <p class="work-list__text">Приложение</p>
+                                </div>
+
+                            </a>
+                        </li>
+                        <li class="work-list__box">
+                            <a class="work-list__link" href="#">
+                                <div class="work-list__thumb">
+                                    <img class="work-list__image" src="./images/portfolio/5.jpg" alt="Технокряк"
+                                        width="370" height="294">
+                                    <div class="work-list__info">
+                                        <p class="work-list__info-text">
+                                            Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                                            сервисов.
+                                            Все это позволит посетителю получить
+                                            исчерпывающие сведения о компании или частном лице.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="work-list__description">
+                                    <h2 class="work-list__title">Inspiration has no Borders</h2>
+                                    <p class="work-list__text">Веб-сайт</p>
+                                </div>
+
+                            </a>
+                        </li>
+                        <li class="work-list__box">
+                            <a class="work-list__link" href="#">
+                                <div class="work-list__thumb">
+                                    <img class="work-list__image" src="./images/portfolio/6.jpg" alt="Технокряк"
+                                        width="370" height="294">
+                                    <div class="work-list__info">
+                                        <p class="work-list__info-text">
+                                            Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                                            сервисов.
+                                            Все это позволит посетителю получить
+                                            исчерпывающие сведения о компании или частном лице.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="work-list__description">
+                                    <h2 class="work-list__title">Издание Limited Edition</h2>
+                                    <p class="work-list__text">Дизайн</p>
+                                </div>
+
+                            </a>
+                        </li>
+                        <li class="work-list__box">
+                            <a class="work-list__link" href="#">
+                                <div class="work-list__thumb">
+                                    <img class="work-list__image" src="./images/portfolio/7.jpg" alt="Технокряк"
+                                        width="370" height="294">
+                                    <div class="work-list__info">
+                                        <p class="work-list__info-text">
+                                            Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                                            сервисов.
+                                            Все это позволит посетителю получить
+                                            исчерпывающие сведения о компании или частном лице.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="work-list__description">
+                                    <h2 class="work-list__title">Проект LAB</h2>
+                                    <p class="work-list__text">Маркетинг</p>
+                                </div>
+
+                            </a>
+                        </li>
+                        <li class="work-list__box">
+                            <a class="work-list__link" href="#">
+                                <div class="work-list__thumb">
+                                    <img class="work-list__image" src="./images/portfolio/8.jpg" alt="Технокряк"
+                                        width="370" height="294">
+                                    <div class="work-list__info">
+                                        <p class="work-list__info-text">
+                                            Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                                            сервисов.
+                                            Все это позволит посетителю получить
+                                            исчерпывающие сведения о компании или частном лице.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="work-list__description">
+                                    <h2 class="work-list__title">Growing Business</h2>
+                                    <p class="work-list__text">Приложение</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="adress">
+                    <a href="/index.html" lang="en" class="adress__logo"><span class="color-accent">Web</span>Studio</a>
+                    <address class="adress__box">
+                        <ul class="adress__list">
+                            <li class="adress__item"><a class="adress__map" href="https://cutt.ly/HHQWCcf"
+                                    rel="noopener noreferrer" target="_blank">г.
+                                    Киев, пр-т Леси Украинки, 26</a></li>
+                            <li class="adress__item"><a class="adress__link" href="mailto:info@devstudio.com"
+                                    target="_blank" lang="en">
+                                    info&#64devstudio.com
+                                </a></li>
+                            <li class="adress__item"><a class="adress__link" href="tel:+380961111111" target="_blank">
+                                    +38
+                                    096
+                                    111
+                                    11
+                                    11 </a></li>
+                        </ul>
+                    </address>
+                </div>
+                <div class="subscribe">
+                    <h2 class="subscribe__title">присоединяйтесь</h2>
+                    <ul class="subscribe__list">
+                        <li class="subscribe__item">
+                            <a class="subscribe__link" href="">
+                                <svg class="subscribe__icon" width="20" height="20">
+                                    <use href="./images/icons.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="subscribe__item">
+                            <a class="subscribe__link" href="">
+                                <svg class="subscribe__icon" width="20" height="20">
+                                    <use href="./images/icons.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="subscribe__item">
+                            <a class="subscribe__link" href="">
+                                <svg class="subscribe__icon" width="20" height="20">
+                                    <use href="./images/icons.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="subscribe__item">
+                            <a class="subscribe__link" href="">
+                                <svg class="subscribe__icon" width="20" height="20">
+                                    <use href="./images/icons.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <form class="action-form">
+                    <div class="action-form__field">
+                        <label class="action-form__label" for="mail">Подпишитесь на рассылку</label>
+                        <input class="action-form__mail" type="email" name="mail" id="mail" placeholder="E-mail"
+                            required>
+                    </div>
+                    <button class="action-form__button" type="submit">Подписаться</button>
+                </form>
+            </div>
+        </footer>
+        <div class="help">
+            <a href="" class="help__link">
+                <div class="help__tip">
+                    А может лучше на завод&quest;&excl;
+                </div>
+            </a>
+        </div>
+    </body>
+
+</html>

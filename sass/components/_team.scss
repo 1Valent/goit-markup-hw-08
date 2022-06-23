@@ -1,0 +1,112 @@
+.team {
+  @extend %section;
+  background-color: $teamBGC;
+
+  &__title {
+    text-align: center;
+    margin: 0 auto 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
+  
+  &__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__shadow {
+    position: relative;
+    width: 270px;
+    height: 428px;
+    z-index: 0;
+  
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      z-index: -1;
+      bottom: 20px;
+      left: 10px;
+      width: 50%;
+      top: 90%;
+      background-color: #212121;
+      max-width: 270px;
+      box-shadow: 0px 16px 10px rgba(0, 0, 0, 0.5);
+      transform: rotate(-3deg);
+    }
+    
+    &:after {
+      transform: rotate(3deg);
+      right: 10px;
+      left: auto;
+    }
+  }
+  
+  &__description {
+    padding: 30px 0;
+    background-color: $accentColor;
+  }
+  &__sub-title {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+  }
+  
+  &__text {
+    color: $lowTextColor;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+  
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+  
+    transition: background-color $timingFunction;
+  
+    &:hover,
+    &:focus {
+      background-color: $borderUndericon;
+    }
+  }
+  
+  &__icon {
+    fill: $iconClient;
+    transition: fill $timingFunction;
+  
+    .socials__link:hover &,
+    .socials__link:focus & {
+      fill: $accentColor;
+    }
+  }
+}
+
+

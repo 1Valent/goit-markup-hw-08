@@ -1,0 +1,85 @@
+.hero {
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
+  padding: 200px 0;
+  background-color: $heroFooterColor;
+
+  animation-name: changeBgGradient;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 10000ms;
+  animation-direction: alternate;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    @extend %container;
+    text-align: center;
+  }
+  
+  &__title {
+    width: 696px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  
+    color: $accentColor;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  &__accent-word {
+    animation-name: changeColor;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 10000ms;
+    animation-direction: normal;
+  }
+  
+  &__button {
+    @extend %button;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+  
+    letter-spacing: 0.06em;
+    padding: 10px 32px;
+    padding-left: 0;
+    color: $accentColor;
+    background-color: $accentBGC;
+    font-weight: 700;
+    line-height: 1.9;
+  
+    transition: background-color $timingFunction;
+  
+    &:hover,
+    &:focus {
+      background-color: $buttonHover;
+    }
+  
+    &::before {
+      content: '';
+      margin: 3px 10px 0;
+  
+      background-image: url(../images/modal-theme-icons/icon-send.svg);
+      width: 24px;
+      height: 24px;
+      background-size: contain;
+      transform: translate(0, 0) scale(1);
+      transition: transform $timingFunction;
+    }
+  
+    &:hover::before,
+    &:focus::before {
+      animation: changeIconPosition 2000ms ease;
+    }
+  }
+}
+
+
