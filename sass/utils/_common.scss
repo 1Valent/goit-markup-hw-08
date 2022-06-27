@@ -1,8 +1,3 @@
-.container {
-  width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
 
 .visually-hidden {
   position: absolute;
@@ -17,16 +12,11 @@
   margin: -1px;
 }
 
-.page {
+body {
   color: $mainTextColor;
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
-  /* fixed position */
-  padding-top: 80px;
-}
-
-.color-accent {
-  color: $accentBGC;
+  position: relative;
 }
 
 li,
@@ -48,8 +38,19 @@ p {
 img,
 svg {
   display: block;
+  height: auto;
+  max-width: 100%;
 }
 
 textarea {
   resize: none;
+}
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.logo-accent-word {
+  color: $borderUndericon;
 }

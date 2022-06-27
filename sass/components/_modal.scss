@@ -1,331 +1,331 @@
-.backdrop {
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  opacity: 1;
-  visibility: 1;
+// .backdrop {
+//   position: fixed;
+//   z-index: 1;
+//   top: 0;
+//   left: 0;
+//   opacity: 1;
+//   visibility: 1;
 
-  width: 100%;
-  height: 100%;
+//   width: 100%;
+//   height: 100%;
 
-  background: linear-gradient(to right, rgb(31, 28, 44, 0.9), rgba(146, 141, 171, 0.1));
-  transition: opacity $timingFunction;
-  &.hidden {
-    opacity: 0;
-    visibility: 0;
-    pointer-events: none;
-  }
-}
+//   background: linear-gradient(to right, rgb(31, 28, 44, 0.9), rgba(146, 141, 171, 0.1));
+//   transition: opacity $timingFunction;
+//   &.hidden {
+//     opacity: 0;
+//     visibility: 0;
+//     pointer-events: none;
+//   }
+// }
 
-.form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  opacity: 1;
-  visibility: 1;
-  padding: 40px;
-  transform: translate(-50%, -50%) scale(1) rotateZ(360deg);
+// .form {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   opacity: 1;
+//   visibility: 1;
+//   padding: 40px;
+//   transform: translate(-50%, -50%) scale(1) rotateZ(360deg);
 
-  width: 528px;
-  height: 581px;
-  background: rgba(255, 255, 255);
+//   width: 528px;
+//   height: 581px;
+//   background: rgba(255, 255, 255);
 
-  transition: transform $timingFunction, opacity $timingFunction;
-  visibility: $timingFunction;
+//   transition: transform $timingFunction, opacity $timingFunction;
+//   visibility: $timingFunction;
 
-  .backdrop.hidden & {
-    transform: translate(-150%, -100%) scale(0.4) rotateZ(0deg);
-    opacity: 0;
-    visibility: 0;
-  }
+//   .backdrop.hidden & {
+//     transform: translate(-150%, -100%) scale(0.4) rotateZ(0deg);
+//     opacity: 0;
+//     visibility: 0;
+//   }
 
-  &__close-button {
-    display: block;
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 30px;
-    height: 30px;
-    padding: 0;
-    margin: 0;
+//   &__close-button {
+//     display: block;
+//     position: absolute;
+//     top: 8px;
+//     right: 8px;
+//     width: 30px;
+//     height: 30px;
+//     padding: 0;
+//     margin: 0;
   
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+//     border-radius: 50%;
+//     border: 1px solid rgba(0, 0, 0, 0.1);
   
-    background-color: $accentColor;
-    transition: border $timingFunction;
-    cursor: pointer;
-    text-align: center;
+//     background-color: $accentColor;
+//     transition: border $timingFunction;
+//     cursor: pointer;
+//     text-align: center;
   
-    &:hover,
-    &:focus {
-      border: 1px solid $accentBGC;
-    }
-  }
+//     &:hover,
+//     &:focus {
+//       border: 1px solid $accentBGC;
+//     }
+//   }
   
-  &__close-icon {
-    transition: fill $timingFunction;
-    margin: 0 auto;
-    .form__close-button:hover &,
-    .form__close-button:focus & {
-      fill: $accentBGC;
-    }
-  }
+//   &__close-icon {
+//     transition: fill $timingFunction;
+//     margin: 0 auto;
+//     .form__close-button:hover &,
+//     .form__close-button:focus & {
+//       fill: $accentBGC;
+//     }
+//   }
   
-  &__title {
-    font-size: 20px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.03em;
+//   &__title {
+//     font-size: 20px;
+//     line-height: 1.15;
+//     text-align: center;
+//     letter-spacing: 0.03em;
   
-    color: $mainTextColor;
-    margin-bottom: 12px;
-  }
+//     color: $mainTextColor;
+//     margin-bottom: 12px;
+//   }
   
-  &__word-accent {
-    animation: formWordAccent 5000ms ease infinite alternate;
-  }
+//   &__word-accent {
+//     animation: formWordAccent 5000ms ease infinite alternate;
+//   }
   
-  &__field {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    margin-top: 30px;
-  }
+//   &__field {
+//     display: flex;
+//     position: relative;
+//     flex-direction: column;
+//     margin-top: 30px;
+//   }
   
-  &__label {
-    position: absolute;
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-    color: $lowTextColor;
-    top: 50%;
-    left: 10%;
-    transform: translateY(-50%);
+//   &__label {
+//     position: absolute;
+//     font-size: 12px;
+//     line-height: 1.16;
+//     letter-spacing: 0.01em;
+//     color: $lowTextColor;
+//     top: 50%;
+//     left: 10%;
+//     transform: translateY(-50%);
   
-    transition: $timingFunction;
+//     transition: $timingFunction;
   
-    .form__input:hover ~ &,
-    .form__input:focus ~ &,
-    .form__input:not(:placeholder-shown) ~ &,
-    .form__input:not(:placeholder-shown) ~ & {
-      transform: translate(-40px, -250%);
-    }
-  }
+//     .form__input:hover ~ &,
+//     .form__input:focus ~ &,
+//     .form__input:not(:placeholder-shown) ~ &,
+//     .form__input:not(:placeholder-shown) ~ & {
+//       transform: translate(-40px, -250%);
+//     }
+//   }
   
-  &__input {
-    height: 40px;
-    margin: 0;
-    padding: 6px 10px 6px 40px;
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-    color: $mainTextColor;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: rgb(255, 255, 255, 0.5);
+//   &__input {
+//     height: 40px;
+//     margin: 0;
+//     padding: 6px 10px 6px 40px;
+//     font-size: 12px;
+//     line-height: 1.16;
+//     letter-spacing: 0.01em;
+//     color: $mainTextColor;
+//     border: 1px solid rgba(33, 33, 33, 0.2);
+//     border-radius: 4px;
+//     cursor: pointer;
+//     background-color: rgb(255, 255, 255, 0.5);
   
-    transition: border-color $timingFunction, background-color $timingFunction;
+//     transition: border-color $timingFunction, background-color $timingFunction;
   
-    &::placeholder {
-      opacity: 0.5;
-    }
+//     &::placeholder {
+//       opacity: 0.5;
+//     }
   
-    &:hover,
-    &:focus {
-      border-color: $accentBGC;
-      background-color: $accentColor;
-    }
+//     &:hover,
+//     &:focus {
+//       border-color: $accentBGC;
+//       background-color: $accentColor;
+//     }
   
-    &:not(:placeholder-shown):required:valid {
-      border-color: #4caf50;
-    }
-    &:not(:placeholder-shown):required:invalid {
-      border-color: #f44336;
-    }
-  }
+//     &:not(:placeholder-shown):required:valid {
+//       border-color: #4caf50;
+//     }
+//     &:not(:placeholder-shown):required:invalid {
+//       border-color: #f44336;
+//     }
+//   }
   
-  &__icon {
-    display: inline-block;
-    position: absolute;
-    pointer-events: none;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 12px;
-    transition: fill $timingFunction;
+//   &__icon {
+//     display: inline-block;
+//     position: absolute;
+//     pointer-events: none;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     left: 12px;
+//     transition: fill $timingFunction;
   
-    .form__input:hover + &,
-    .form__input:focus + & {
-      fill: $accentBGC;
-    }
-  }
+//     .form__input:hover + &,
+//     .form__input:focus + & {
+//       fill: $accentBGC;
+//     }
+//   }
   
-  &__field--comment {
-    margin-bottom: 25px;
-  }
+//   &__field--comment {
+//     margin-bottom: 25px;
+//   }
   
-  &__input--comment {
-    display: absolute;
-    height: 120px;
-    padding: 10px;
-  }
+//   &__input--comment {
+//     display: absolute;
+//     height: 120px;
+//     padding: 10px;
+//   }
   
-  &__label--comment {
-    top: 15%;
-    transform: translateY(-50%);
+//   &__label--comment {
+//     top: 15%;
+//     transform: translateY(-50%);
   
-    &::placeholder {
-      padding-left: 16px;
-    }
-  }
+//     &::placeholder {
+//       padding-left: 16px;
+//     }
+//   }
   
-}
+// }
 
-.agreements {
-  display: block;
-  position: relative;
-  margin-bottom: 25px;
-  max-width: 424px;
-  margin: 0 auto;
-  margin-bottom: 30px;
+// .agreements {
+//   display: block;
+//   position: relative;
+//   margin-bottom: 25px;
+//   max-width: 424px;
+//   margin: 0 auto;
+//   margin-bottom: 30px;
     
-&__tip {
-  display: flex;
-  position: absolute;
-  background-color: #fff;
-  border: 1px solid red;
-  border-radius: 10px;
-  padding: 10px;
+// &__tip {
+//   display: flex;
+//   position: absolute;
+//   background-color: #fff;
+//   border: 1px solid red;
+//   border-radius: 10px;
+//   padding: 10px;
 
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: #757575;
+//   font-size: 14px;
+//   line-height: 1.71;
+//   letter-spacing: 0.03em;
+//   color: #757575;
 
-  left: 25%;
-  bottom: 30px;
-  opacity: 0;
-  pointer-events: none;
+//   left: 25%;
+//   bottom: 30px;
+//   opacity: 0;
+//   pointer-events: none;
 
-  transition: opacity $timingFunction 1000ms;
+//   transition: opacity $timingFunction 1000ms;
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    left: 75%;
-    bottom: -21px;
-    border: 10px solid transparent;
-    border-top: 10px solid rgb(244, 67, 54);
-  }
-  &::after {
-    border-top: 10px solid white;
-    bottom: -20px;
-  }
+//   &::before,
+//   &::after {
+//     content: '';
+//     position: absolute;
+//     left: 75%;
+//     bottom: -21px;
+//     border: 10px solid transparent;
+//     border-top: 10px solid rgb(244, 67, 54);
+//   }
+//   &::after {
+//     border-top: 10px solid white;
+//     bottom: -20px;
+//   }
 
-  .agreements:hover &,
-  .agreements:focus & {
-    opacity: 1;
-    pointer-events: all;
-  }
-}
+//   .agreements:hover &,
+//   .agreements:focus & {
+//     opacity: 1;
+//     pointer-events: all;
+//   }
+// }
 
-&__label {
-  display: flex;
-  align-items: center;
+// &__label {
+//   display: flex;
+//   align-items: center;
 
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: $lowTextColor;
-  cursor: pointer;
-}
+//   font-size: 14px;
+//   line-height: 1.71;
+//   letter-spacing: 0.03em;
+//   color: $lowTextColor;
+//   cursor: pointer;
+// }
 
-&__link {
-  color: $accentBGC;
-}
+// &__link {
+//   color: $accentBGC;
+// }
 
-&__icon {
-  display: inline-block;
-  /* width: 15px;
-  height: 15px; */
-  border: 2px solid $mainTextColor;
-  border-radius: 4px;
-  fill: transparent;
-  background-color: transparent;
-  margin-right: 7px;
-  transform: scale(1);
-  transition: fill $timingFunction, border $timingFunction, background-color $timingFunction,
-    transform $timingFunction;
+// &__icon {
+//   display: inline-block;
+//   /* width: 15px;
+//   height: 15px; */
+//   border: 2px solid $mainTextColor;
+//   border-radius: 4px;
+//   fill: transparent;
+//   background-color: transparent;
+//   margin-right: 7px;
+//   transform: scale(1);
+//   transition: fill $timingFunction, border $timingFunction, background-color $timingFunction,
+//     transform $timingFunction;
 
-  .agreements__checkbox:hover + &,
-  .agreements__checkbox:focus + & {
-    border-color: rgb(244, 67, 54);
-    color: rgb(244, 67, 54);
-  }
+//   .agreements__checkbox:hover + &,
+//   .agreements__checkbox:focus + & {
+//     border-color: rgb(244, 67, 54);
+//     color: rgb(244, 67, 54);
+//   }
 
-  .agreements__checkbox:checked + & {
-    background-color: $accentBGC;
-    border-color: transparent;
-    fill: $accentColor;
-    transform: scale(1.2);
-  }
-}
+//   .agreements__checkbox:checked + & {
+//     background-color: $accentBGC;
+//     border-color: transparent;
+//     fill: $accentColor;
+//     transform: scale(1.2);
+//   }
+// }
 
-&__checkbox {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
+// &__checkbox {
+//   position: absolute;
+//   white-space: nowrap;
+//   width: 1px;
+//   height: 1px;
+//   overflow: hidden;
+//   border: 0;
+//   padding: 0;
+//   clip: rect(0 0 0 0);
+//   clip-path: inset(50%);
+//   margin: -1px;
+// }
 
-&__word {
-  transition: color $timingFunction;
+// &__word {
+//   transition: color $timingFunction;
 
-  .agreements__checkbox:hover ~ &,
-  .agreements__checkbox:focus ~ & {
-    border-color: rgb(244, 67, 54);
-    color: rgb(244, 67, 54);
-  }
+//   .agreements__checkbox:hover ~ &,
+//   .agreements__checkbox:focus ~ & {
+//     border-color: rgb(244, 67, 54);
+//     color: rgb(244, 67, 54);
+//   }
 
-  .agreements__checkbox:checked ~ & {
-    color: $accentBGC;
-  }
-}
+//   .agreements__checkbox:checked ~ & {
+//     color: $accentBGC;
+//   }
+// }
 
-&__button {
-  display: flex;
-  margin: 0 auto;
-  align-items: center;
-  text-align: center;
-  padding: 10px 55px;
+// &__button {
+//   display: flex;
+//   margin: 0 auto;
+//   align-items: center;
+//   text-align: center;
+//   padding: 10px 55px;
 
-  background: $accentBGC;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: 1px;
-  cursor: pointer;
+//   background: $accentBGC;
+//   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+//   border-radius: 4px;
+//   border: 1px;
+//   cursor: pointer;
 
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.8;
-  letter-spacing: 0.06em;
-  color: $accentColor;
+//   font-weight: 700;
+//   font-size: 16px;
+//   line-height: 1.8;
+//   letter-spacing: 0.06em;
+//   color: $accentColor;
 
-  transition: background-color $timingFunction;
+//   transition: background-color $timingFunction;
 
-  &:hover,
-  &:focus {
-    background-color: $buttonHover;
-  }
-}
-}
+//   &:hover,
+//   &:focus {
+//     background-color: $buttonHover;
+//   }
+// }
+// }
 
